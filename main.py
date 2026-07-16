@@ -1,8 +1,10 @@
 from time import sleep
 import fun
-import config
+from dotenv import find_dotenv,load_dotenv
+import os
 
-bot_token=config.bot_token
+load_dotenv()
+bot_token=os.getenv('bot_token')
 base_url=f'https://api.telegram.org/bot{bot_token}'
 
 offset=0
